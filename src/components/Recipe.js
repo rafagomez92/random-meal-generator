@@ -10,14 +10,17 @@ const Recipe = (props) => {
 
             {/* De esta manera puedo agregar los videos de youtube unicamente agregando el id del video */}
             {/* http://www.youtube.com/embed/ al final solo se agrega el id del video */}
-            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/C3pAgB7pync" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> */}
+            {/* Uno de los elementos del array no cuenta con video el que lleva el nombre Honey Balsamic Chicken with Crispy Broccoli & Potatoes le agregue un video de los otros elementos*/}
+            <div className="text-center">
+            <iframe width="560" height="315" src={props.info.mealVideo} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+            </div>
 
-            <h4 className="text-white badge-danger text-center font-weight-bold">{props.info.mealCategory}</h4>                  
-             <div class="row">
-                <div class="col">
+            <h4 className="text-white badge-danger text-center font-weight-bold mt-3">{props.info.mealCategory}</h4>                  
+             <div className="row">
+                <div className="col">
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
+                        <div className="carousel-inner">
+                            <div className="carousel-item active">
                                 <img src={props.info.mealNameThumb} class="d-block w-100" alt="..."/>
                             </div>        
                         </div>
@@ -48,12 +51,12 @@ const Recipe = (props) => {
                 </div>
             </div>
 
-            <div class="card text-center mt-4">
-                <div class="card-header bg-danger text-white">
+            <div className="card text-center mt-4">
+                <div className="card-header bg-danger text-white">
                     <h4 className="font-weight-bold">Instrucciones</h4>
                 </div>
-                <div class="card-body">                    
-                    <p class="card-text text-justify">{props.info.instructions}</p>                    
+                <div className="card-body">                    
+                    <p className="card-text text-justify">{props.info.instructions}</p>                    
                 </div>
             </div>
 
