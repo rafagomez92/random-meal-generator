@@ -1,14 +1,10 @@
 import React from 'react';
 
 const Recipe = (props) => {
-
-
-
     return(
         <div>
             <h1 className="text-warning font-weight-bold text-center">{props.info.mealName}</h1>                                
-
-            {/* De esta manera puedo agregar los videos de youtube unicamente agregando el id del video */}
+            {/* con el tag iframe puedo agregar los videos de youtube unicamente agregando el id del video */}
             {/* http://www.youtube.com/embed/ al final solo se agrega el id del video */}
             {/* Uno de los elementos del array no cuenta con video el que lleva el nombre Honey Balsamic Chicken with Crispy Broccoli & Potatoes le agregue un video de los otros elementos*/}
             <div className="text-center">
@@ -21,12 +17,12 @@ const Recipe = (props) => {
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         <div className="carousel-inner">
                             <div className="carousel-item active">
-                                <img src={props.info.mealNameThumb} class="d-block w-100" alt="..."/>
+                                <img src={props.info.mealNameThumb} className="d-block w-100" alt="..."/>
                             </div>        
                         </div>
                     </div>                
                 </div>
-                <div class="col">                    
+                <div className="col">                    
                     <h4 className="text-warning font-weight-bold ml-2">Ingredientes</h4>
                     <p className="text-warning font-weight-bold">{props.info.ingredient1}  <span className="text-danger font-weight-normal">{props.info.measure1}</span></p>
                     <p className="text-warning font-weight-bold">{props.info.ingredient2}  <span className="text-danger font-weight-normal">{props.info.measure2}</span></p>
