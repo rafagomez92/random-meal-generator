@@ -1,12 +1,17 @@
 import React from 'react';
 
 const Recipe = (props) => {
+
+
+
     return(
         <div>
-            <h1 className="text-warning font-weight-bold text-center">{props.info.mealName}</h1>            
-            <video src={props.info.MealVideo} width="750" height="500" controls>
-                <source src={props.info.MealVideo}/>
-            </video>
+            <h1 className="text-warning font-weight-bold text-center">{props.info.mealName}</h1>                                
+
+            {/* De esta manera puedo agregar los videos de youtube unicamente agregando el id del video */}
+            {/* http://www.youtube.com/embed/ al final solo se agrega el id del video */}
+            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/C3pAgB7pync" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> */}
+
             <h4 className="text-white badge-danger text-center font-weight-bold">{props.info.mealCategory}</h4>                  
              <div class="row">
                 <div class="col">

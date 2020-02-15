@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import recipesData from '../recipesData';
 import Recipe from './Recipe';
 import GetRecipeButton from './GetRecipeButton';
-import PreviousRecipeButton from './PreviousRecipeButton';
 import ExtraInformation from './ExtraInformation';
 
 class RecipesGenerator extends Component {    
